@@ -1,14 +1,17 @@
 
 .container{
     display:flex;
-    width:800px;
+    width:960px;
+    height:960px;
     flex-wrap: wrap;
+
+
 }
 
 .square{
     border: 1px solid black;
-    width:48px;
-    height:48px;
+    width: calc(100% / 16);
+    aspect-ratio: 1;
 }
 
 .color{

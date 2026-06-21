@@ -1,15 +1,26 @@
 const container = document.querySelector(".container");
-for(let i=0; i<256;i++){
+createSquares(16);
+
+
+    
+
+
+function createSquares(number){
+
+    container.innerHTML= "";
+    for(let i=0; i<number*number;i++){
     let div = document.createElement("div");
     div.classList.add("square");
-    container.appendChild(div);
-}
-
-const divs = document.querySelectorAll(".square");
-divs.forEach((div)=>{
-    div.addEventListener("mouseenter",()=>{
+        div.addEventListener("mouseenter",()=>{
         div.classList.add("color");
     });
-    
-    
-})
+    div.style.width = `${100 / number}%`;
+    container.appendChild(div);
+}
+}
+
+const button = document.querySelector(".button");
+button.addEventListener("click",(e)=> {
+    let number = prompt("Enter Number");
+    createSquares(number);
+});
