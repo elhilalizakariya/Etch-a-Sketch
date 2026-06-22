@@ -24,8 +24,8 @@ function createSquares(number){
         console.log(div.style.opacity);
         div.style.opacity = parseFloat(div.style.opacity) +0.1;
     });
-    div.style.width = `${(960 / number)-2}px`;
-    div.style.height = `${(960 / number)-2}px`;
+    div.style.width = `${(800 / number)-2}px`;
+    div.style.height = `${(800 / number)-2}px`;
 
     container.appendChild(div);
 }
